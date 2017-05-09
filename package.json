@@ -7,8 +7,8 @@
     "static"
   ],
   "author": "JJ",
-  "license": "",
-  "homepage": "",
+  "license": "MIT",
+  "homepage": "jerry@junnnnj.com",
   "devDependencies": {
     "browser-sync": "~2.12.8",
     "compass-mixins": "^0.12.10",
