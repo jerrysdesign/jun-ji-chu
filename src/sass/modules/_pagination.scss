@@ -1,0 +1,78 @@
+// =Pagination
+// -----------------------------------------------------------------------------
+%hide-text {
+  @include hide-text;
+}
+%pagination-icon {
+  @include size(20px);
+}
+.pagination {
+  position: relative;
+  list-style: none;
+  @include pie-clearfix;
+  ul, li {
+    @include reset-box-model;
+  }
+  li {
+    float: left;
+    margin-right: 2px;
+    list-style: none;
+    a,span {
+      display: block;
+      padding: 2px 5px;
+      line-height: 1;
+      // color: $colorPagination;
+      text-decoration: none;
+    }
+    a {
+      color: $color-primary;
+    }
+  }
+  span {
+    // border: 1px solid #ddd;
+  }
+
+  .first {
+    a,
+    span {
+      @extend %hide-text;
+      @extend %pagination-icon;
+    }
+    a { background-image: url(../images/icon-first.png);}
+    span { background-image: url(../images/icon-first-n.png);}
+  }
+  .prev {
+    a,
+    span {
+      @extend %hide-text;
+      @extend %pagination-icon;
+    }
+    a { background-image: url(../images/icon-prev.png);}
+    span { background-image: url(../images/icon-prev-n.png);}
+  }
+  .next {
+    a,
+    span {
+      @extend %hide-text;
+      @extend %pagination-icon;
+    }
+    a { background-image: url(../images/icon-next.png);}
+    span { background-image: url(../images/icon-next-n.png);}
+  }
+  .last {
+    a,
+    span {
+      @extend %hide-text;
+      @extend %pagination-icon;
+    }
+    a { background-image: url(../images/icon-last.png);}
+    span { background-image: url(../images/icon-last-n.png);}
+  }
+}
+
+.pagination li a:focus,
+.pagination li a:hover {
+  text-decoration: none;
+  // background-color: $colorPagination;
+  // color: #fff;
+}

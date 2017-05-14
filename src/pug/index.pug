@@ -1,7 +1,38 @@
 extends partails/base
-include partails/nav
+include partails/header
+include partails/footer
 
 block content
-  +nav
-  div.center
-    h1 軍機處錄副奏摺微卷數位資料庫
+  .container
+    +header
+    .tool-bar
+      .title 奏摺查詢
+    .main
+      .left-col.hot-keyword
+        .title 奏摺查詢
+        .content
+          p 這裡放模組
+
+      .right-col.history
+        .title
+          | 歷史上的今天
+          .time-picker-trigger
+            a(href='javascri[t:;') 05/10/2017
+        .history-container
+          a.btn.outline.full-width(href='javascript:;') 上一頁
+          ul.history-items
+            -for (var i = 1; i <= 4; i++)
+              li.history-item
+                .history-item_deta
+                  .year_ch 同治五年
+                  .year_ad 1866
+                  .deta_md 12月12日
+                .history-item_content
+                  dl.history-item_title
+                    dt 題名
+                    dd 為揀員調補要缺知縣以資治理，仰祈聖鍵事
+                    dt 具奏人名銜
+                    dd 江西巡撫劉坤一
+          a.btn.outline.full-width(href='javascript:;') 下一頁
+
+    +footer

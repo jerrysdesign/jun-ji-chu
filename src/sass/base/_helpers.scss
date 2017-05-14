@@ -7,7 +7,7 @@
 
 // clearfix
 %clearfix {
- &:after {
+  &:after {
     content: '';
     display: block;
     clear: both;
@@ -18,6 +18,17 @@
   @extend %clearfix;
 }
 
+.cf:before,
+.cf:after {
+  content:"";
+  display:table;
+}
+.cf:after {
+  clear:both;
+}
+.cf {
+  zoom:1;
+}
 
 // transition
 %transition {
@@ -26,7 +37,7 @@
 
 // justify nav
 %justify {
- text-align: justify; 
+ text-align: justify;
  font-size: 1px;
  line-height: 0px;
  > * {
@@ -36,7 +47,7 @@
   font-size: $font-size-base;
   line-height: $line-height-base;
  }
- &:after { 
+ &:after {
   content: '';
   width: 100%;
   display: inline-block;
@@ -57,3 +68,6 @@
   overflow: hidden;
 }
 
+.pull-right {
+  float: right;
+}

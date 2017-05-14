@@ -1,0 +1,151 @@
+extends partails/base
+include partails/header
+include partails/footer
+
+block content
+  .container
+    +header
+    .tool-bar
+      .title 簡目頁
+    .main
+      .left-col.results
+        .content
+          .results-detail
+            dl
+              dt 檢索詞
+              dd
+                span '奏'
+                | 檢索結果
+                span {n}
+                | 筆資料
+              dt 再檢索
+              dd
+                form
+                  select
+                    option 不限欄位
+                    option option1
+                    option option2
+                    option option3
+                  input.btn.primary(type='submit', name='{n}', value='確定')
+                  button.btn(href='javascript') 重新檢索
+          .operation-bar
+            select
+              option 不限欄位
+              option option1
+              option option2
+              option option3
+            .pagination
+              ul
+                li.first: span 最前頁
+                li.prev: span 上一頁
+                li: a(href='javascript:;') 1
+                li: a(href='javascript:;') 2
+                li: a(href='javascript:;') 3
+                li: a(href='javascript:;') 4
+                li: a(href='javascript:;') 5
+                li.next: a(href='javascript:;') 下一頁
+                li.last: a(href='javascript:;') 最後頁
+            a.btn.secdend(href='javascript') 跳至
+            input.input-page(type='number', name='{n}', min='{n}', max='{n}')
+            | /
+            span {n}
+            | 頁
+            .pull-right
+              | 每頁顯示
+              select.show-page
+                option {n}
+                option {n}
+                option {n}
+                option {n}
+
+          .list
+            ul
+              li.list-hide 全選
+              li.list-hide #
+              li 文件形式
+              li 具奏時間
+              li 具奏單位(省別)
+              li 具奏人
+              li 題目
+            -for (var i = 1; i < 10; i++)
+              ul
+                li.list-hide(data-label='checkbox')
+                  input(type='checkbox')
+                li.list-hide(data-label='no') #
+                li(data-label='文件形式') {奏}
+                li(data-label='具奏時間') 同治{yy}年{mm}月{}日
+                li(data-label='具奏單位(省別)') {省份名}
+                li(data-label='具奏人') {人名}
+                li(data-label='題目') {文字...文字}
+
+      .right-col.output
+        ul.tabs
+          li.active(rel='tab1') 輸出管理
+          li(rel='tab2') 結果分析
+        .tab_container
+          // #tab1
+          #tab1.tab_content
+            .output-inner-block-1
+              .output-title 輸出記錄
+              .inline-form
+                label
+                  input(type='radio', name='optionsRadios1', id='optionsRadios1-1', value='option1')
+                  |  本次勾選記錄(
+                  span 0
+                  | )筆
+              .inline-form
+                label
+                  input(type='radio', name='optionsRadios1', id='optionsRadios1-2', value='option2')
+                  |  所有勾選記錄
+                  span 0
+                  | )筆
+              .record 此次策略記錄
+              .limit (輸出上限100筆)
+              .output-title 輸出欄位
+              .inline-form
+                label
+                  input(type='radio', name='optionsRadios2', id='optionsRadios2-1', value='option1')
+                  |  簡易書目
+              .inline-form
+                label
+                  input(type='radio', name='optionsRadios2', id='optionsRadios2-2', value='option2')
+                  |  完整書目
+              .inline-form
+                label
+                  input(type='radio', name='optionsRadios2', id='optionsRadios2-3', value='option3')
+                  |  選擇之欄位
+              .output-title 輸出字碼
+              .inline-form
+                label
+                  input(type='radio', name='optionsRadios3', id='optionsRadios3-1', value='option1')
+                  |  UTF-8
+              .inline-form
+                label
+                  input(type='radio', name='optionsRadios3', id='optionsRadios3-2', value='option2')
+                  |  BIG5
+              .inline-form
+                label
+                  input(type='radio', name='optionsRadios3', id='optionsRadios3-3', value='option3')
+                  |  GB2312
+            .output-inner-block-2
+              ul.tabs
+                li.active(rel='tab1-1') 儲存
+                li(rel='tab1-2') 轉寄
+                li(rel='tab1-3') 預覽
+              .tab_container
+                #tab1-1.tab_content
+                  .output-inner-block-2
+                    select
+                      option TXT 檔
+                    a.btn(href="javascript:;") 儲存
+                #tab1-2.tab_content
+                  .output-inner-block-2
+                    p tab1-2
+                #tab1-3.tab_content
+                  .output-inner-block-2
+                    p tab1-3
+          // #tab2
+          #tab2.tab_content
+            .output-inner-block-1
+
+    +footer

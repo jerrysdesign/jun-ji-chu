@@ -1,0 +1,72 @@
+.footer {
+  background-color: $color-primary;
+  color: white;
+  font-size: 13px;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+  .footer-nav {
+    margin-top: 2px;
+    ul {
+      @include reset-box-model;
+      @include reset-list-style;
+      li {
+        @include reset-box-model;
+        display: inline-block;
+      }
+      li + li {
+        border-left: 1px solid white;
+        // margin-left: 15px;
+      }
+      li:first-child {
+        a {
+          padding-left: 0;
+        }
+      }
+      a {
+        padding: 0 18px;
+      }
+    }
+  }
+  .left-col {
+    width: 45%;
+    float: left;
+    @include media('<=tablet') {
+      width: 100%;
+      float: auto;
+      display: inline-block;
+      text-align: center;
+    }
+  }
+  .right-col {
+    width: 50%;
+    float: right;
+    @include media('<=tablet') {
+      width: 100%;
+      float: auto;
+      display: inline-block;
+      text-align: center;
+    }
+  }
+  .nmth-logo,
+  .moc-logo {
+    display: inline-block;
+  }
+  .nmth-logo + .moc-logo {
+    margin-left: 20px;
+  }
+  .footer-inner {
+    @include media('>=desktop') {
+      width: 974px;
+    }
+    margin: 0 auto;
+    @include pie-clearfix;
+    p {
+      margin-bottom: 10px;
+    }
+  }
+}

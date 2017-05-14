@@ -1,4 +1,5 @@
 @import "../../node_modules/compass-mixins/lib/compass";
+@import "../../node_modules/susy/sass/susy";
 $breakpoints: (
   'xs-phone': 320px,
   'phone': 480px,
@@ -29,6 +30,9 @@ $media-expressions: (
 
 @import 'modules/_typography';
 @import 'modules/_forms';
+@import 'modules/_btn';
+@import 'modules/_pagination';
 
+@import "layout/_layout";
 @import "layout/_header";
 @import "layout/_footer";

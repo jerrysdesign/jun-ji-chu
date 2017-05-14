@@ -1,24 +1,24 @@
-mixin nav
+mixin header
   .header
     .top-line
     //- .logo
     //-   img(src="", alt="Logo")
     .nav-bar
-      .menu#menu
-        span.lines#line-1
-        span.lines#line-2
-        span.lines#line-3
       .nav-bar-inner
-        nav.main-nav
-          ul
+        nav.main-nav.cf
+          ul.cf
             li: a(href='javascript:;') 資料庫緣起
             li: a(href='javascript:;') 影片說明
             li: a(href='javascript:;') 瀏覽查詢
             li: a(href='javascript:;') 進階查詢
             li: a(href='javascript:;') 網站連結
             li: a(href='javascript:;') 個人書房
-        .go-home
-          a(href='javascript:;') 回首頁
+          a(href="javascript:;", id ='openup') MENU
+            //- span.lines#line-1
+            //- span.lines#line-2
+            //- span.lines#line-3
+          .go-home
+            a(href='javascript:;') 回首頁
     .banner
-      img(src="http://placehold.it/974x234/F7F2DA/880505")
+      img(src="images/banner.png")
 

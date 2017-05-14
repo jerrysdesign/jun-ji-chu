@@ -13,18 +13,18 @@ $base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
 // Body
 $base-text-color: $black !default;
 $base-background-color: $white !default;
-$font-size-base: 26px !default;
-$line-height-base: 1.2 !default;
+// $font-size-base: 13px !default;
+// $line-height-base: 1.2 !default;
 $base-font-family: $base-font-sans-serif !default;
 
-$vertical-rhythm: ($line-height-base * 1em);
+// $vertical-rhythm: ($line-height-base * 1em);
 
 $base-min-width: 320px;
 
 // Liks
 $base-link-color: $light-blue;
 
-// Buttons 
+// Buttons
 $btn-color: $white !default;
 $btn-background: $black !default;
 $btn-padding: 0.4em 0.7em !default;
@@ -49,3 +49,35 @@ $headings-color: inherit !default;
 
 
 $animation-speed: 0.3s;
+
+// =============
+//      Colors
+//      :Add website colors
+// =============
+
+$color-primary: #880505;
+$color-gray-lighter: #EEEEEE;
+$color-gray-light: #C7C6C9;
+$color-gray: #B5B5B5;
+$color-gray-dark: #717171;
+$color-gray-darker: #252525;
+// $secondary-color    :
+// $complementary-color:
+
+
+
+// =============
+//      Font
+//      :Change to your font
+// =============
+$main-font: Helvetica;
+
+
+
+// =============
+//      Media Queries breakpoints
+// =============
+$small-devices : 21.875em;
+$medium-devices: 46.875em;
+$large-devices : 62.500em;
+$xlarge-devices: 81.250em;

@@ -1,0 +1,39 @@
+extends partails/base
+include partails/header
+include partails/footer
+
+block content
+  .container
+    +header
+    .tool-bar
+      .title 詳目頁
+    .main
+      .left-col.detail
+        dl
+          dt 檔名
+          dd {n}
+          dt 文件形式
+          dd {n}
+          dt 具奏時間
+          dd {n}
+          dt 硃批時間
+          dd {n}
+          dt 具奏單位(省別)
+          dd {n}
+          dt 具奏人名銜
+          dd {n}
+          dt 類名
+          dd {n}
+          dt 內容一: 地名
+          dd {n}
+          dt 內容貳: 人名
+          dd {n}
+          dt 硃批內容
+          dd {n}
+          dt 附件(清單、圖式)
+          dd {n}
+          dt 備註
+          dd {n}
+      .right-col.view-img
+        div 這裡放模組
+    +footer
